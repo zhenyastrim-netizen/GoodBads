@@ -1,0 +1,4 @@
+repository "Наша игра/Наша игра@7972579025967@cloud"
+  path "/"
+    br "/main"
+    co "/main"
