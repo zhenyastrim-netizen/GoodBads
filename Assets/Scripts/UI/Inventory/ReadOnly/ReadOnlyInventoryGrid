@@ -1,0 +1,9 @@
+using System;
+using System.Numerics;
+
+public interface ReadOnlyInventoryGrid: ReadOnlyInventory
+{
+   event Action <Vector2Int> Size;
+   Vector2Int Size {get;}
+   ReadOnlyInventorySlot[,]GetSLots();
+}
