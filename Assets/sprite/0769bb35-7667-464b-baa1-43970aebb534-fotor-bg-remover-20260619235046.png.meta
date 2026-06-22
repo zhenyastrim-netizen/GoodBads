@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: 655b9f1549d74114585ba2fe4bbe1ecf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3808198870331242468
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_0
+  - first:
+      213: -2321244237871896307
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_1
+  - first:
+      213: 1391835112413809825
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_2
+  - first:
+      213: -9008498652449791497
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_3
+  - first:
+      213: -8923778617367065896
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_4
+  - first:
+      213: -718748040068143903
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_5
+  - first:
+      213: -2306390281336894851
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_6
+  - first:
+      213: -6899847809180105302
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_7
+  - first:
+      213: 6796988167664310165
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_8
+  - first:
+      213: 6689481543924578159
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_9
+  - first:
+      213: -5683084741547527496
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_10
+  - first:
+      213: -6370188691159668265
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_11
+  - first:
+      213: 202596486720830513
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_12
+  - first:
+      213: 4843141008280404164
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_13
+  - first:
+      213: -7486057257471201757
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_14
+  - first:
+      213: 2123296626737832784
+    second: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 135
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_0
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 867
+        width: 125
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18ccdbdd4f862bc0800000000000000
+      internalID: -3808198870331242468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_1
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 867
+        width: 125
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0929b40aa849cfd0800000000000000
+      internalID: -2321244237871896307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_2
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 867
+        width: 120
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac475519aac05310800000000000000
+      internalID: 1391835112413809825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_3
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 867
+        width: 127
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1252564326bf280800000000000000
+      internalID: -9008498652449791497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_4
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 465
+        width: 121
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da0c91b0ae582480800000000000000
+      internalID: -8923778617367065896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_5
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 465
+        width: 101
+        height: 361
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4eab4377e7606f0800000000000000
+      internalID: -718748040068143903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_6
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 476
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a4087424e0effd0800000000000000
+      internalID: -2306390281336894851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_7
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 465
+        width: 117
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5009979f0de30a0800000000000000
+      internalID: -6899847809180105302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_8
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 465
+        width: 126
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5971a2cf9b0c35e50800000000000000
+      internalID: 6796988167664310165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 42
+        width: 120
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67f7259500d5dc50800000000000000
+      internalID: 6689481543924578159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_10
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 38
+        width: 118
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2fd9fa980a121b0800000000000000
+      internalID: -5683084741547527496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_11
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 40
+        width: 128
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9a737d22b8897a0800000000000000
+      internalID: -6370188691159668265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_12
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 44
+        width: 151
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13cbcb76e64cfc200800000000000000
+      internalID: 202596486720830513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_13
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 44
+        width: 152
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c04ea3461b463340800000000000000
+      internalID: 4843141008280404164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_14
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 46
+        width: 130
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ea130569e2c1890800000000000000
+      internalID: -7486057257471201757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_15
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 47
+        width: 123
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0536e754807777d10800000000000000
+      internalID: 2123296626737832784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 298b6e39ba490104fb07ef9f1f1ac695
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1024.0,"y":196.0},"gridSpriteOffset":{"x":0.0,"y":810.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_0: -3808198870331242468
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_1: -2321244237871896307
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_10: -5683084741547527496
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_11: -6370188691159668265
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_12: 202596486720830513
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_13: 4843141008280404164
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_14: -7486057257471201757
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_15: 2123296626737832784
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_2: 1391835112413809825
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_3: -9008498652449791497
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_4: -8923778617367065896
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_5: -718748040068143903
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_6: -2306390281336894851
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_7: -6899847809180105302
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_8: 6796988167664310165
+      0769bb35-7667-464b-baa1-43970aebb534-fotor-bg-remover-20260619235046_9: 6689481543924578159
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
