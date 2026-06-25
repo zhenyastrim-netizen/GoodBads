@@ -3,6 +3,7 @@ using UnityEngine;
 public class AttackHitbox : MonoBehaviour
 {
     public int damage;
+    
 
     void OnTriggerEnter2D(Collider2D other)
     {

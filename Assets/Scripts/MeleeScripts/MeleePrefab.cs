@@ -1,42 +1,54 @@
-using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class MeleeWeapon : MonoBehaviour
 {
-    public GameObject hitboxPrefab;
-    public float attackDistance = 1f;
-    public float hitboxDuration = 0.1f;
-    public float AttackSpeed=1f;
-    public float NextHit=0f;
+    public GameObject attackProjectionPrefab;
+
+    public Transform ghostPoint;
+
+    public float attackSpeed = 2f;
+    public int damage = 1;
+
+    private float nextHitTime = 0f;
+
+    private int comboIndex = 0;
+    private float comboTimer = 0f;
+    public float comboResetTime = 0.8f;
 
     void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame && Time.time>=NextHit)
+        if (Time.time > comboTimer)
+            comboIndex = 0;
+
+        if (Mouse.current.leftButton.wasPressedThisFrame && Time.time >= nextHitTime)
         {
             Attack();
-            NextHit=Time.time+1f/AttackSpeed;
-
+            nextHitTime = Time.time + 1f / attackSpeed;
         }
     }
 
     void Attack()
     {
+        comboIndex++;
+
+        if (comboIndex > 3)
+            comboIndex = 1;
+
+        comboTimer = Time.time + comboResetTime;
+
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         mousePos.z = 0;
 
-        Vector2 direction = (mousePos - transform.position).normalized;
+        Vector2 direction = (mousePos - ghostPoint.position).normalized;
 
-        Vector3 spawnPos = transform.position + (Vector3)direction * attackDistance;
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        GameObject hitbox = Instantiate(
-            hitboxPrefab,
-            spawnPos,
-            Quaternion.Euler(0, 0, angle)
+        GameObject projection = Instantiate(
+            attackProjectionPrefab,
+            ghostPoint.position,
+            Quaternion.identity
         );
 
-        Destroy(hitbox, hitboxDuration);
+        AttackProjection attackProjection = projection.GetComponent<AttackProjection>();
+        attackProjection.Setup(comboIndex, damage, direction);
     }
 }
