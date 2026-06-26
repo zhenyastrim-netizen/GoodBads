@@ -4,64 +4,67 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
-    public float MoveSpeed=3;
+
+    public float MoveSpeed = 3f;
+
     public SpriteRenderer sr;
     public InputAction MoveAction;
-    public Animator animator;
     public InputAction FireAction;
+    public Animator animator;
+
+    public PlayerDash playerDash;
+
     private Vector2 lastMoveDirection = Vector2.down;
-   
-    
-    Rigidbody2D rb;
-    
-   
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Rigidbody2D rb;
+    public Vector2 MoveInput { get; private set; }
+    public Vector2 LastMoveDirection => lastMoveDirection;
+    public InputAction Using;
+    void Awake()
     {
-        FireAction.Enable();
-        animator=GetComponent<Animator>();
-        sr=GetComponent<SpriteRenderer>();
-        MoveAction.Enable();
-        rb=GetComponent<Rigidbody2D>();
-        
+        Instance = this;
+
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
+
+        if (playerDash == null)
+            playerDash = GetComponent<PlayerDash>();
     }
 
-    // Update is called once per frame
+    void OnEnable()
+    {
+        Using.Enable();
+        MoveAction.Enable();
+        FireAction.Enable();
+    }
+
+    void OnDisable()
+    {
+        Using.Enable();
+        MoveAction.Disable();
+        FireAction.Disable();
+    }
+
     void FixedUpdate()
     {
-        
-        Vector2 move=MoveAction.ReadValue<Vector2>();
-        Vector2 position=(Vector2)transform.position+move*MoveSpeed*Time.deltaTime;
+        // если игрок делает dash — обычное движение НЕ работает
+        if (playerDash != null && playerDash.IsDashing)
+            return;
+
+        MoveInput = MoveAction.ReadValue<Vector2>();
+        Vector2 move = MoveInput;
+
+        Vector2 position = rb.position + move * MoveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(position);
-       
-
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        
-
-        
 
         if (move.sqrMagnitude > 0.01f)
         {
-        lastMoveDirection = move.normalized;
+            lastMoveDirection = move.normalized;
 
-        animator.SetFloat("Horizontal", lastMoveDirection.x);
-        animator.SetFloat("Vertical", lastMoveDirection.y);
+            animator.SetFloat("Horizontal", lastMoveDirection.x);
+            animator.SetFloat("Vertical", lastMoveDirection.y);
         }
 
         animator.SetFloat("MoveSpeed", move.sqrMagnitude);
-       /*if (mousePos.x<transform.position.x)
-        {
-            sr.flipX=true;
-        }
-        else
-        {
-            sr.flipX=false;
-        }
-        */
     }
-
-
-    }
-
-
+}
