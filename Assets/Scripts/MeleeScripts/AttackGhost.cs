@@ -12,6 +12,7 @@ public class AttackProjection : MonoBehaviour
 
     private int damage;
     private Vector2 attackDirection;
+    public float hitboxDistance = 0.5f;
 
     void Awake()
     {
@@ -46,36 +47,28 @@ public class AttackProjection : MonoBehaviour
     }
 
     public void SpawnHitbox()
+{
+    if (hitboxPrefab == null)
     {
-        Debug.Log("SpawnHitbox вызвался!");
-
-        if (hitboxPrefab == null)
-        {
-            Debug.LogError("Hitbox Prefab не назначен!");
-            return;
-        }
-
-        if (attackPoint == null)
-        {
-            Debug.LogError("Attack Point не назначен!");
-            return;
-        }
-
-        float angle = Mathf.Atan2(attackDirection.y, attackDirection.x) * Mathf.Rad2Deg;
-
-        GameObject hitbox = Instantiate(
-            hitboxPrefab,
-            attackPoint.position,
-            Quaternion.Euler(0, 0, angle)
-        );
-
-        AttackHitbox attackHitbox = hitbox.GetComponent<AttackHitbox>();
-
-        if (attackHitbox != null)
-            attackHitbox.damage = damage;
-        else
-            Debug.LogError("На hitboxPrefab нет скрипта AttackHitbox!");
-
-        Destroy(hitbox, hitboxDuration);
+        Debug.LogError("Hitbox Prefab не назначен!");
+        return;
     }
+
+    float angle = Mathf.Atan2(attackDirection.y, attackDirection.x) * Mathf.Rad2Deg;
+
+    Vector3 spawnPos = transform.position + (Vector3)attackDirection * hitboxDistance;
+
+    GameObject hitbox = Instantiate(
+        hitboxPrefab,
+        spawnPos,
+        Quaternion.Euler(0, 0, angle)
+    );
+
+    AttackHitbox attackHitbox = hitbox.GetComponent<AttackHitbox>();
+
+    if (attackHitbox != null)
+        attackHitbox.damage = damage;
+
+    Destroy(hitbox, hitboxDuration);
+}
 }
