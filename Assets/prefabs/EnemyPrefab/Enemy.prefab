@@ -203,3 +203,8 @@ MonoBehaviour:
   detectionRange: 8
   attackRange: 1.2
   attackCooldown: 1
+  hitboxPrefab: {fileID: 7320100944648356946, guid: 285a828e43e01d246b062826ef0ee754, type: 3}
+  attackDistance: 0.7
+  hitboxDuration: 0.15
+  damage: 1
+  animator: {fileID: 0}
