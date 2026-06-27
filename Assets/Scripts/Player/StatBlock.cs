@@ -3,6 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public class StatBlock
 {
+    public float maxHpPercent;
     public float meleeDamagePercent;     // урон ближнего боя
     public float rangedDamagePercent;    // урон дальнего боя
     public float spellDamagePercent;     // урон заклинаний
@@ -18,6 +19,7 @@ public class StatBlock
 
     public void Add(StatBlock other)
     {
+        maxHpPercent += other.maxHpPercent;
         meleeDamagePercent += other.meleeDamagePercent;
         rangedDamagePercent += other.rangedDamagePercent;
         spellDamagePercent += other.spellDamagePercent;

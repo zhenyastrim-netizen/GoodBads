@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2649788030455191229}
   - component: {fileID: 9127451153996524137}
   - component: {fileID: 8858436356955419325}
+  - component: {fileID: -6657702200639445869}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -184,8 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ca8b840a9968f4087355c69fe8894e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHealth: 5
-  currentHealth: 0
+  maxHealth: 50
+  currentHealth: 50
 --- !u!114 &8858436356955419325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,3 +209,19 @@ MonoBehaviour:
   hitboxDuration: 0.15
   damage: 1
   animator: {fileID: 0}
+--- !u!114 &-6657702200639445869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8558046283684970046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6943a67d786d33545baaacbf944cef6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExperienceDropper
+  experienceOrbPrefab: {fileID: 1445263762991000023, guid: ba12ab0ed2845604c924eeba088920b5, type: 3}
+  totalExperience: 25
+  expPerOrb: 5
+  scatterRadius: 0.5

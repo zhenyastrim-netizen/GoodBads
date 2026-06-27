@@ -23,7 +23,12 @@ public class EnemyHealth : MonoBehaviour
     }
 
     void Die()
-    {
-        Destroy(gameObject);
-    }
+{
+    ExperienceDropper dropper = GetComponent<ExperienceDropper>();
+
+    if (dropper != null)
+        dropper.DropExperience();
+
+    Destroy(gameObject);
+}
 }
