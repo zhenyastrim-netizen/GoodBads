@@ -13,6 +13,7 @@ public class AttackProjection : MonoBehaviour
     private int damage;
     private Vector2 attackDirection;
     public float hitboxDistance = 0.5f;
+    public GameObject slashEffectPrefab;
 
     void Awake()
     {
@@ -65,10 +66,19 @@ public class AttackProjection : MonoBehaviour
     );
 
     AttackHitbox attackHitbox = hitbox.GetComponent<AttackHitbox>();
+    
 
     if (attackHitbox != null)
         attackHitbox.damage = damage;
 
     Destroy(hitbox, hitboxDuration);
+    if (slashEffectPrefab != null)
+    {
+        Instantiate(
+            slashEffectPrefab,
+            spawnPos,
+            Quaternion.Euler(0, 0, angle-180f)
+        );
+    }
 }
 }

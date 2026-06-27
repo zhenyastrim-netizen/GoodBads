@@ -133,7 +133,8 @@ MonoBehaviour:
   attackPoint: {fileID: 565656348356078397}
   hitboxDuration: 0.5
   lifeTime: 0.4
-  hitboxDistance: 0.5
+  hitboxDistance: 1
+  slashEffectPrefab: {fileID: 2929996456532293036, guid: c644e05283c7b204798d2386ab67b9a3, type: 3}
 --- !u!1 &7462695297321607891
 GameObject:
   m_ObjectHideFlags: 0

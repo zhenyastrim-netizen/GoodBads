@@ -5,9 +5,17 @@ public class HealthSystem : MonoBehaviour
     public int maxHp = 100;
     public int currentHp;
     public PlayerDash playerDash;
+    public healthbar healthBar;
     void Start()
     {
         currentHp = maxHp;
+          currentHp = maxHp;
+
+        if (playerDash == null)
+            playerDash = GetComponent<PlayerDash>();
+
+        if (healthBar != null)
+            healthBar.SetHealth(currentHp, maxHp);
         
     }
 
@@ -17,7 +25,8 @@ public class HealthSystem : MonoBehaviour
         return;
 
     currentHp -= damage;
-
+    if (healthBar != null)
+            healthBar.SetHealth(currentHp, maxHp);
     if (currentHp <= 0)
     {
         Die();
@@ -35,6 +44,8 @@ public class HealthSystem : MonoBehaviour
     {
         currentHp += amount;
         currentHp = Mathf.Clamp(currentHp, 0, maxHp);
+        if (healthBar != null)
+            healthBar.SetHealth(currentHp, maxHp);
     }
 
     void Die()
