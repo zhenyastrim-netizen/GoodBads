@@ -3,9 +3,10 @@ using UnityEngine.InputSystem;
 
 public class InventoryToggle : MonoBehaviour
 {
-    public CanvasGroup inventoryPanel;
+    public CanvasGroup inventoryWindow;
+    public StatsPanelUI statsPanelUI;
 
-    private bool isOpen = false;
+    private bool isOpen;
 
     private void Start()
     {
@@ -17,13 +18,9 @@ public class InventoryToggle : MonoBehaviour
         if (Keyboard.current.tabKey.wasPressedThisFrame)
         {
             if (isOpen)
-            {
                 CloseInventory();
-            }
             else
-            {
                 OpenInventory();
-            }
         }
     }
 
@@ -31,17 +28,20 @@ public class InventoryToggle : MonoBehaviour
     {
         isOpen = true;
 
-        inventoryPanel.alpha = 1;
-        inventoryPanel.interactable = true;
-        inventoryPanel.blocksRaycasts = true;
+        inventoryWindow.alpha = 1;
+        inventoryWindow.interactable = true;
+        inventoryWindow.blocksRaycasts = true;
+
+        if (statsPanelUI != null)
+            statsPanelUI.UpdateStats();
     }
 
     private void CloseInventory()
     {
         isOpen = false;
 
-        inventoryPanel.alpha = 0;
-        inventoryPanel.interactable = false;
-        inventoryPanel.blocksRaycasts = false;
+        inventoryWindow.alpha = 0;
+        inventoryWindow.interactable = false;
+        inventoryWindow.blocksRaycasts = false;
     }
 }

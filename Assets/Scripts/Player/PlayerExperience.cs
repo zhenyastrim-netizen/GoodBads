@@ -12,12 +12,17 @@ public class PlayerExperience : MonoBehaviour
 
     public ExpManager experienceBar;
     public HealthSystem playerHealth;
+    public PlayerStats playerStats;
 
     void Start()
     {
         if (playerHealth == null)
             playerHealth = GetComponent<HealthSystem>();
 
+        if (playerStats == null)
+            playerStats = GetComponent<PlayerStats>();
+
+        SyncPlayerStats();
         UpdateExpBar();
     }
 
@@ -43,9 +48,20 @@ public class PlayerExperience : MonoBehaviour
             playerHealth.IncreaseMaxHealth(hpPerLevel, healToFullOnLevelUp);
         }
 
+        SyncPlayerStats();
+
         expToNextLevel = Mathf.RoundToInt(expToNextLevel * 1.25f);
 
         Debug.Log("Новый уровень: " + level);
+    }
+
+    void SyncPlayerStats()
+    {
+        if (playerStats == null)
+            return;
+
+        playerStats.level = level;
+        playerStats.RecalculateStats();
     }
 
     void UpdateExpBar()

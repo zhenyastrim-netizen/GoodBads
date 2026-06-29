@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Player/Stats Config")]
+[CreateAssetMenu(menuName = "Stats/Player Stats Config")]
 public class PlayerStatsConfig : ScriptableObject
 {
     public float baseMoveSpeed = 3f;

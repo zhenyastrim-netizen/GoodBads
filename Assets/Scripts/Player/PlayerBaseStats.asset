@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c95f8037ed8ba47982783f20b5ac7b, type: 3}
+  m_Name: PlayerBaseStats
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStatsConfig
+  baseMoveSpeed: 3
+  baseStats:
+    maxHpPercent: 0
+    meleeDamagePercent: 0
+    rangedDamagePercent: 0
+    spellDamagePercent: 0
+    attackSpeedPercent: 0
+    reloadSpeedPercent: 0
+    critChancePercent: 0
+    critDamagePercent: 0
+    luckPercent: 0
+    moveSpeedPercent: 0
+  statsPerLevel:
+    maxHpPercent: 30
+    meleeDamagePercent: 5
+    rangedDamagePercent: 5
+    spellDamagePercent: 5
+    attackSpeedPercent: 0.05
+    reloadSpeedPercent: 0
+    critChancePercent: 0.1
+    critDamagePercent: 0.1
+    luckPercent: 0.1
+    moveSpeedPercent: 0.1
