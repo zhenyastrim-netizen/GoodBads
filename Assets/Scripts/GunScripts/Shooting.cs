@@ -1,56 +1,79 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Shooting : MonoBehaviour
+public class Shooting : MonoBehaviour, IUsableItem
 {
     public Transform FirePoint;
     public GameObject BulletPrefab;
 
-    public InputAction FireAction;
-
     public float bulletSpeed = 20f;
-    public float fireRate = 0.15f;
+
+    // Это задержка между выстрелами.
+    // 0.15 = быстро, примерно как автомат
+    public float fireCooldown = 0.15f;
+
     public int damage = 10;
 
     private float nextFireTime = 0f;
     private Camera mainCamera;
-    public WeaponReload weaponReload;
-    void Start()
+    private WeaponReload weaponReload;
+
+    private void Awake()
     {
-        FireAction.Enable();
         mainCamera = Camera.main;
-       
-
-    weaponReload = GetComponent<WeaponReload>();
+        weaponReload = GetComponent<WeaponReload>();
     }
 
-    void Update()
+    public void Use()
     {
-        if (FireAction.IsPressed() && Time.time >= nextFireTime)
+        if (Time.time < nextFireTime)
+            return;
+
+        Shoot();
+        nextFireTime = Time.time + fireCooldown;
+    }
+
+    public void Reload()
+    {
+        if (weaponReload != null)
         {
-            Shoot();
-             nextFireTime = Time.time + 1f/fireRate;
+            weaponReload.StartReload();
         }
     }
 
-    void Shoot()
+    private void Shoot()
     {
-        if (!weaponReload.CanShoot())
+        if (FirePoint == null || BulletPrefab == null)
         {
-        weaponReload.StartReload();
-        return;
+            Debug.LogError("FirePoint или BulletPrefab не назначены на оружии!");
+            return;
         }
+
+        if (weaponReload != null)
+        {
+            if (!weaponReload.CanShoot())
+            {
+                weaponReload.StartReload();
+                return;
+            }
+
+            weaponReload.SpendAmmo();
+        }
+
         Vector3 mousePos = mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         mousePos.z = 0f;
 
         Vector2 direction = ((Vector2)mousePos - (Vector2)FirePoint.position).normalized;
 
         GameObject bullet = Instantiate(BulletPrefab, FirePoint.position, Quaternion.identity);
-        weaponReload.SpendAmmo();
+
         Bullet bulletScript = bullet.GetComponent<Bullet>();
-        bulletScript.SetDirection(direction);
-        bulletScript.SetSpeed(bulletSpeed);
-        bulletScript.SetDamage(damage);
-       
+
+        if (bulletScript != null)
+        {
+            bulletScript.SetDirection(direction);
+            bulletScript.SetSpeed(bulletSpeed);
+            bulletScript.SetDamage(damage);
+        }
     }
 }
